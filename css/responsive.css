@@ -1,0 +1,672 @@
+/* =========================================================
+   TRAVELSPHERE
+   RESPONSIVE.CSS
+========================================================= */
+
+
+/* =========================================================
+   LARGE LAPTOP
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: min(92%, 1100px);
+    }
+
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .hero h1 {
+        font-size: 68px;
+    }
+
+    .destination-grid {
+        gap: 18px;
+    }
+
+    .experience-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET LANDSCAPE
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+
+        font-size: 60px;
+    }
+
+    .hero p {
+        max-width: 560px;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        padding: 18px;
+    }
+
+    .search-item {
+        border-right: none;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+
+    /* =========================
+       DESTINATIONS
+    ========================= */
+
+    .destination-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       PACKAGES
+    ========================= */
+
+    .package-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    .why-us-content {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .why-us-image {
+        height: 500px;
+    }
+
+
+    /* =========================
+       HOTELS
+    ========================= */
+
+    .hotel-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       TESTIMONIALS
+    ========================= */
+
+    .testimonial-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       BLOG
+    ========================= */
+
+    .blog-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter-content {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-container {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-actions .login-btn {
+        display: none;
+    }
+
+    .nav-actions .btn {
+        display: none;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero-content {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .travel-search {
+        margin-top: -30px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+    .search-item {
+        min-height: 60px;
+    }
+
+
+    /* =========================
+       DESTINATIONS
+    ========================= */
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card,
+    .destination-card:nth-child(1),
+    .destination-card:nth-child(4) {
+        min-height: 400px;
+    }
+
+
+    /* =========================
+       PACKAGES
+    ========================= */
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       EXPERIENCES
+    ========================= */
+
+    .experience-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .experience-card {
+        min-height: 300px;
+    }
+
+
+    /* =========================
+       HOTELS
+    ========================= */
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us-image {
+        height: 420px;
+    }
+
+
+    /* =========================
+       TESTIMONIALS
+    ========================= */
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       BLOG
+    ========================= */
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter-form {
+        flex-direction: column;
+
+        padding: 10px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .section {
+        padding: 60px 0;
+    }
+
+
+    /* =========================
+       SECTION HEADING
+    ========================= */
+
+    .section-heading {
+        margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar-container {
+        gap: 10px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 34px;
+        height: 34px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        min-height: 620px;
+
+        background-position: center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(8, 30, 30, 0.86),
+                rgba(8, 30, 30, 0.60)
+            );
+    }
+
+    .hero-content {
+        padding: 50px 0;
+    }
+
+    .hero-small-title {
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        line-height: 1.08;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+        padding: 12px;
+    }
+
+    .search-item {
+        padding: 8px 10px;
+    }
+
+
+    /* =========================
+       DESTINATION
+    ========================= */
+
+    .destination-card,
+    .destination-card:nth-child(1),
+    .destination-card:nth-child(4) {
+        min-height: 360px;
+    }
+
+    .destination-content {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .destination-content h3 {
+        font-size: 26px;
+    }
+
+
+    /* =========================
+       PACKAGE
+    ========================= */
+
+    .package-image {
+        height: 210px;
+    }
+
+    .package-content {
+        padding: 20px;
+    }
+
+    .package-content h3 {
+        font-size: 22px;
+    }
+
+
+    /* =========================
+       WHY US
+    ========================= */
+
+    .why-us-image {
+        height: 350px;
+    }
+
+    .why-us-text h2 {
+        font-size: 34px;
+    }
+
+
+    /* =========================
+       EXPERIENCES
+    ========================= */
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        min-height: 320px;
+    }
+
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats-section {
+        padding: 55px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 25px 10px;
+    }
+
+    .stat strong {
+        font-size: 32px;
+    }
+
+    .stat span {
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       TESTIMONIAL
+    ========================= */
+
+    .testimonial-card {
+        padding: 22px;
+    }
+
+
+    /* =========================
+       BLOG
+    ========================= */
+
+    .blog-card > img {
+        height: 210px;
+    }
+
+
+    /* =========================
+       NEWSLETTER
+    ========================= */
+
+    .newsletter-section {
+        padding: 55px 0;
+    }
+
+    .newsletter-content h2 {
+        font-size: 34px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        padding: 55px 0;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat {
+        padding: 5px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+
+        font-size: 13px;
+    }
+
+}

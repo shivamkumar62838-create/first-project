@@ -1,0 +1,928 @@
+/* =========================================================
+   TRAVELSPHERE
+   STYLE.CSS
+   Global + Common Components
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --secondary: #f59e0b;
+
+    --dark: #102a2a;
+    --text: #4b5f5f;
+    --light-text: #718080;
+
+    --white: #ffffff;
+    --light: #f6f9f8;
+    --light-green: #eaf6f3;
+
+    --border: #e2e9e7;
+
+    --shadow:
+        0 15px 40px rgba(16, 42, 42, 0.10);
+
+    --shadow-small:
+        0 8px 25px rgba(16, 42, 42, 0.08);
+
+    --radius: 18px;
+    --radius-small: 10px;
+
+    --container: 1200px;
+
+    --transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container {
+    width: min(90%, var(--container));
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    color: var(--dark);
+
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Primary */
+
+.primary-btn {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* Secondary */
+
+.secondary-btn {
+    background: var(--white);
+    color: var(--dark);
+}
+
+.secondary-btn:hover {
+    background: var(--light-green);
+}
+
+
+/* Outline */
+
+.outline-btn {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+}
+
+.outline-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* Small */
+
+.small-btn {
+    min-height: 40px;
+    padding: 9px 18px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 7px;
+}
+
+
+/* =========================================================
+   SECTION BUTTON
+========================================================= */
+
+.section-button {
+    margin-top: 45px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    color: var(--dark);
+}
+
+.logo img {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAV MENU
+========================================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin-left: auto;
+}
+
+.nav-menu a {
+    position: relative;
+
+    padding: 5px 0;
+
+    color: var(--text);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color var(--transition);
+}
+
+.nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: width var(--transition);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary);
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   NAV ACTIONS
+========================================================= */
+
+.nav-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.login-btn {
+    color: var(--dark);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-btn:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 8px;
+
+    background: var(--light-green);
+
+    color: var(--primary);
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DESTINATION CARD
+========================================================= */
+
+.destination-card {
+    position: relative;
+
+    min-height: 420px;
+
+    overflow: hidden;
+
+    border-radius: var(--radius);
+
+    background: var(--dark);
+
+    box-shadow: var(--shadow-small);
+}
+
+.destination-card > img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover > img {
+    transform: scale(1.05);
+}
+
+.destination-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.80),
+            rgba(0, 0, 0, 0.05)
+        );
+}
+
+.destination-content {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+}
+
+.destination-content span {
+    color: #d8eeee;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.destination-content h3 {
+    margin: 5px 0;
+
+    color: var(--white);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 29px;
+}
+
+.destination-content p {
+    margin-bottom: 12px;
+
+    color: #e6eeee;
+
+    font-size: 13px;
+}
+
+.destination-content a {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+========================================================= */
+
+.package-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.package-image {
+    position: relative;
+
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.package-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.package-badge {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 50px;
+
+    background: var(--secondary);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.package-content {
+    padding: 23px;
+}
+
+.package-location {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.package-content h3 {
+    margin: 7px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 24px;
+}
+
+.package-content p {
+    margin-bottom: 18px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.package-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 13px 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+.package-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-top: 18px;
+}
+
+.package-bottom small {
+    display: block;
+
+    color: var(--light-text);
+
+    font-size: 11px;
+}
+
+.package-bottom strong {
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   HOTEL CARD
+========================================================= */
+
+.hotel-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-small);
+
+    transition: transform var(--transition);
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+.hotel-card > img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.hotel-content {
+    padding: 22px;
+}
+
+.hotel-content > span {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hotel-content h3 {
+    margin: 7px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+}
+
+.rating {
+    margin-bottom: 17px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+}
+
+.rating strong {
+    margin-left: 6px;
+
+    color: var(--text);
+}
+
+.hotel-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+}
+
+.hotel-bottom strong {
+    color: var(--dark);
+
+    font-size: 19px;
+}
+
+.hotel-bottom small {
+    color: var(--light-text);
+
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.hotel-bottom a {
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blog-card {
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-small);
+}
+
+.blog-card > img {
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 23px;
+}
+
+.blog-content > span {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.blog-content h3 {
+    margin: 8px 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+    line-height: 1.25;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.blog-content a {
+    color: var(--primary);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    background: #102a2a;
+
+    color: #d7e2e2;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1.5fr;
+
+    gap: 50px;
+
+    padding: 75px 0;
+}
+
+.footer .logo {
+    margin-bottom: 20px;
+
+    color: var(--white);
+}
+
+.footer-brand > p {
+    max-width: 350px;
+
+    color: #aebebe;
+
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: #b7c7c7;
+
+    font-size: 13px;
+}
+
+.social-links a:hover {
+    color: var(--white);
+}
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-column h3 {
+    margin-bottom: 8px;
+
+    color: var(--white);
+
+    font-size: 16px;
+}
+
+.footer-column a,
+.footer-column p {
+    color: #aebebe;
+
+    font-size: 13px;
+}
+
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    padding: 20px 0;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #91a5a5;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: var(--white);
+
+    color: var(--dark);
+
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(15, 118, 110, 0.08);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+    outline: 3px solid rgba(15, 118, 110, 0.35);
+    outline-offset: 3px;
+}
