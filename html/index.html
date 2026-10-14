@@ -4,24 +4,25 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
     <meta name="description"
-        content="TravelSphere - Explore breathtaking destinations, discover unforgettable experiences, and plan your perfect journey.">
+        content="Discover extraordinary destinations, handpicked hotels, memorable travel experiences and carefully designed holiday packages with TravelSphere.">
 
     <meta name="keywords"
-        content="TravelSphere, travel, destinations, hotels, travel packages, vacation, tourism">
+        content="TravelSphere, travel, destinations, holiday packages, hotels, tourism, travel guides">
 
     <meta name="author" content="TravelSphere">
 
-    <title>TravelSphere | Explore. Discover. Travel.</title>
+    <meta name="theme-color" content="#ffffff">
 
-    <!-- Main CSS -->
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/pages.css">
-<link rel="stylesheet" href="../css/responsive.css">
+    <title>TravelSphere | Discover Your Next Journey</title>
+
+    <!-- Existing CSS Files: Paths Unchanged -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
 </head>
 
 <body>
@@ -34,58 +35,75 @@
 
         <div class="container navbar-container">
 
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                <img src="../assets/images/logo.png" alt="TravelSphere Logo">
+            <!-- Brand Logo -->
+            <a href="./index.html" class="logo" aria-label="TravelSphere Home">
+
+                <img
+                    src="../assets/images/logo.png"
+                    alt="TravelSphere Logo"
+                >
+
                 <span>TravelSphere</span>
+
             </a>
 
-            <!-- Navigation -->
-            <nav class="nav-menu">
 
-                <a href="index.html" class="active">Home</a>
+            <!-- Main Navigation -->
+            <nav class="nav-menu" aria-label="Main navigation">
 
-                <a href="destinations.html">
+                <a href="./index.html" class="active" aria-current="page">
+                    Home
+                </a>
+
+                <a href="./destinations.html">
                     Destinations
                 </a>
 
-                <a href="packages.html">
+                <a href="./packages.html">
                     Packages
                 </a>
 
-                <a href="hotels.html">
+                <a href="./hotels.html">
                     Hotels
                 </a>
 
-                <a href="blog.html">
+                <a href="./blog.html">
                     Blog
                 </a>
 
-                <a href="about.html">
+                <a href="./about.html">
                     About
                 </a>
 
-                <a href="contact.html">
+                <a href="./contact.html">
                     Contact
                 </a>
 
             </nav>
 
+
             <!-- Navbar Actions -->
             <div class="nav-actions">
 
-                <a href="login.html" class="login-btn">
+                <a href="./login.html" class="login-btn">
                     Login
                 </a>
 
-                <a href="booking.html" class="btn primary-btn">
+                <a href="./booking.html" class="btn primary-btn">
                     Book Now
                 </a>
 
             </div>
 
+
             <!-- Mobile Menu Button -->
-            <button class="menu-btn">
+            <button
+                class="menu-btn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
                 ☰
             </button>
 
@@ -95,10 +113,15 @@
 
 
     <!-- =====================================================
-         HERO SECTION
+         MAIN CONTENT
     ====================================================== -->
 
     <main>
+
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
 
         <section class="hero">
 
@@ -107,28 +130,51 @@
             <div class="container hero-content">
 
                 <span class="hero-small-title">
-                    ✈️ YOUR JOURNEY STARTS HERE
+                    ✈ YOUR NEXT ADVENTURE STARTS HERE
                 </span>
 
+
                 <h1>
-                    Explore The World,
-                    <span>One Journey At A Time.</span>
+                    The World Is Waiting.
+                    <span>Let's Explore It.</span>
                 </h1>
 
+
                 <p>
-                    Discover breathtaking destinations, unforgettable
-                    experiences and beautiful places around the world.
+                    From peaceful beaches to breathtaking mountains,
+                    discover extraordinary places and create memories
+                    that stay with you forever.
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="destinations.html" class="btn primary-btn">
+                    <a
+                        href="./destinations.html"
+                        class="btn primary-btn"
+                    >
                         Explore Destinations
                     </a>
 
-                    <a href="packages.html" class="btn secondary-btn">
-                        View Packages
+
+                    <a
+                        href="./packages.html"
+                        class="btn secondary-btn"
+                    >
+                        Discover Packages
                     </a>
+
+                </div>
+
+
+                <!-- Small Trust Message -->
+                <div class="hero-trust">
+
+                    <span>✦</span>
+
+                    <p>
+                        Find your next favourite place with TravelSphere.
+                    </p>
 
                 </div>
 
@@ -137,9 +183,10 @@
         </section>
 
 
-        <!-- =====================================================
-             TRAVEL SEARCH
-        ====================================================== -->
+
+        <!-- =================================================
+             TRAVEL SEARCH SECTION
+        ================================================== -->
 
         <section class="travel-search">
 
@@ -153,12 +200,19 @@
                         <span class="search-icon">📍</span>
 
                         <div>
-                            <label>Destination</label>
+
+                            <label for="destination">
+                                Destination
+                            </label>
 
                             <input
                                 type="text"
-                                placeholder="Where do you want to go?"
+                                id="destination"
+                                name="destination"
+                                placeholder="Where would you like to go?"
+                                autocomplete="off"
                             >
+
                         </div>
 
                     </div>
@@ -170,11 +224,17 @@
                         <span class="search-icon">📅</span>
 
                         <div>
-                            <label>Check In</label>
+
+                            <label for="checkin">
+                                Check In
+                            </label>
 
                             <input
                                 type="date"
+                                id="checkin"
+                                name="checkin"
                             >
+
                         </div>
 
                     </div>
@@ -186,11 +246,17 @@
                         <span class="search-icon">📅</span>
 
                         <div>
-                            <label>Check Out</label>
+
+                            <label for="checkout">
+                                Check Out
+                            </label>
 
                             <input
                                 type="date"
+                                id="checkout"
+                                name="checkout"
                             >
+
                         </div>
 
                     </div>
@@ -202,27 +268,30 @@
                         <span class="search-icon">👥</span>
 
                         <div>
-                            <label>Travelers</label>
 
-                            <select>
+                            <label for="travelers">
+                                Travelers
+                            </label>
 
-                                <option>
+                            <select id="travelers" name="travelers">
+
+                                <option value="1">
                                     1 Traveler
                                 </option>
 
-                                <option>
+                                <option value="2" selected>
                                     2 Travelers
                                 </option>
 
-                                <option>
+                                <option value="3">
                                     3 Travelers
                                 </option>
 
-                                <option>
+                                <option value="4">
                                     4 Travelers
                                 </option>
 
-                                <option>
+                                <option value="5">
                                     5+ Travelers
                                 </option>
 
@@ -234,8 +303,12 @@
 
 
                     <!-- Search Button -->
-                    <button class="search-btn">
-                        Search
+                    <button
+                        class="search-btn"
+                        type="button"
+                        onclick="window.location.href='./destinations.html'"
+                    >
+                        Search Trips →
                     </button>
 
                 </div>
@@ -245,57 +318,62 @@
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              POPULAR DESTINATIONS
-        ====================================================== -->
+        ================================================== -->
 
         <section class="destinations-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        EXPLORE THE WORLD
+                        PLACES WORTH DISCOVERING
                     </span>
 
                     <h2>
-                        Popular Destinations
+                        Find Your Next Favourite Destination
                     </h2>
 
                     <p>
-                        Discover the most beautiful and exciting
-                        destinations loved by travelers around the world.
+                        Discover beautiful places, experience different
+                        cultures and turn your travel dreams into reality.
                     </p>
 
                 </div>
 
 
+
+                <!-- Destination Cards -->
                 <div class="destination-grid">
 
-                    <!-- Destination 1 -->
+
+                    <!-- Bali -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/Bali.png"
-                            alt="Bali Indonesia"
+                            alt="Beautiful tropical destination in Bali, Indonesia"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
                             <span>Indonesia</span>
 
-                            <h3>
-                                Bali
-                            </h3>
+                            <h3>Bali</h3>
 
                             <p>
-                                Tropical beaches, temples and
-                                unforgettable experiences.
+                                Discover tropical beaches, peaceful temples
+                                and unforgettable island adventures.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Bali →
                             </a>
 
                         </div>
@@ -303,29 +381,29 @@
                     </article>
 
 
-                    <!-- Destination 2 -->
+
+                    <!-- Paris -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/paris.jpg"
-                            alt="Paris France"
+                            alt="Paris, France"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
                             <span>France</span>
 
-                            <h3>
-                                Paris
-                            </h3>
+                            <h3>Paris</h3>
 
                             <p>
-                                Experience romance, culture,
-                                architecture and amazing food.
+                                Experience romantic streets, iconic
+                                architecture and wonderful French cuisine.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Paris →
                             </a>
 
                         </div>
@@ -333,29 +411,29 @@
                     </article>
 
 
-                    <!-- Destination 3 -->
+
+                    <!-- Dubai -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/dubai.jpg"
-                            alt="Dubai UAE"
+                            alt="Dubai skyline in the United Arab Emirates"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
                             <span>United Arab Emirates</span>
 
-                            <h3>
-                                Dubai
-                            </h3>
+                            <h3>Dubai</h3>
 
                             <p>
-                                Luxury, adventure and futuristic
-                                city experiences.
+                                Explore spectacular skylines, desert
+                                adventures and unforgettable city life.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Dubai →
                             </a>
 
                         </div>
@@ -363,29 +441,29 @@
                     </article>
 
 
-                    <!-- Destination 4 -->
+
+                    <!-- Maldives -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/maldives.jpg"
-                            alt="Maldives"
+                            alt="Beautiful turquoise waters of the Maldives"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
-                            <span>Maldives</span>
+                            <span>Indian Ocean</span>
 
-                            <h3>
-                                Maldives
-                            </h3>
+                            <h3>Maldives</h3>
 
                             <p>
-                                Crystal clear water, beaches and
-                                luxury island resorts.
+                                Escape to crystal-clear waters, peaceful
+                                beaches and beautiful island resorts.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Maldives →
                             </a>
 
                         </div>
@@ -393,29 +471,29 @@
                     </article>
 
 
-                    <!-- Destination 5 -->
+
+                    <!-- Switzerland -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/switzerland.jpg"
-                            alt="Switzerland"
+                            alt="Swiss mountains and beautiful landscapes"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
                             <span>Europe</span>
 
-                            <h3>
-                                Switzerland
-                            </h3>
+                            <h3>Switzerland</h3>
 
                             <p>
-                                Snowy mountains, beautiful lakes
-                                and breathtaking landscapes.
+                                Experience snow-covered mountains,
+                                charming villages and stunning lakes.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Switzerland →
                             </a>
 
                         </div>
@@ -423,94 +501,109 @@
                     </article>
 
 
-                    <!-- Destination 6 -->
+
+                    <!-- Manali -->
                     <article class="destination-card">
 
                         <img
                             src="../assets/images/manali.jpg"
-                            alt="Manali India"
+                            alt="Mountain landscape in Manali, India"
+                            loading="lazy"
                         >
 
                         <div class="destination-content">
 
-                            <span>India</span>
+                            <span>Himachal Pradesh, India</span>
 
-                            <h3>
-                                Manali
-                            </h3>
+                            <h3>Manali</h3>
 
                             <p>
-                                Mountains, valleys, snow and
-                                unforgettable adventures.
+                                Enjoy mountain views, green valleys,
+                                fresh air and exciting outdoor adventures.
                             </p>
 
-                            <a href="destination-details.html">
-                                Explore →
+                            <a href="./destination-details.html">
+                                Discover Manali →
                             </a>
 
                         </div>
 
                     </article>
 
+
                 </div>
 
 
+
+                <!-- View All -->
                 <div class="section-button">
 
-                    <a href="destinations.html" class="btn outline-btn">
-                        View All Destinations
+                    <a
+                        href="./destinations.html"
+                        class="btn outline-btn"
+                    >
+                        Explore All Destinations →
                     </a>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
-             FEATURED PACKAGES
-        ====================================================== -->
+
+        <!-- =================================================
+             FEATURED TRAVEL PACKAGES
+        ================================================== -->
 
         <section class="packages-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        TRAVEL PACKAGES
+                        YOUR NEXT GETAWAY
                     </span>
 
                     <h2>
-                        Featured Travel Packages
+                        Handpicked Travel Packages
                     </h2>
 
                     <p>
-                        Carefully designed packages for your next
-                        unforgettable adventure.
+                        Thoughtfully selected travel experiences to help
+                        you spend less time planning and more time exploring.
                     </p>
 
                 </div>
 
 
+
+                <!-- Package Grid -->
                 <div class="package-grid">
 
-                    <!-- Package 1 -->
+
+                    <!-- Bali Package -->
                     <article class="package-card">
 
                         <div class="package-image">
 
                             <img
                                 src="../assets/images/Bali Paradise.png"
-                                alt="Bali Travel Package"
+                                alt="Bali Paradise Escape travel package"
+                                loading="lazy"
                             >
 
                             <span class="package-badge">
-                                Popular
+                                Popular Choice
                             </span>
 
                         </div>
+
 
                         <div class="package-content">
 
@@ -523,25 +616,24 @@
                             </h3>
 
                             <p>
-                                Experience beaches, temples,
-                                waterfalls and island adventures.
+                                Spend your days exploring beautiful beaches,
+                                tropical landscapes and cultural landmarks.
                             </p>
+
 
                             <div class="package-info">
 
-                                <span>
-                                    🗓 5 Days
-                                </span>
+                                <span>🗓 5 Days</span>
 
-                                <span>
-                                    ⭐ 4.9
-                                </span>
+                                <span>⭐ 4.9</span>
 
                             </div>
+
 
                             <div class="package-bottom">
 
                                 <div>
+
                                     <small>
                                         Starting from
                                     </small>
@@ -549,13 +641,15 @@
                                     <strong>
                                         ₹29,999
                                     </strong>
+
                                 </div>
 
+
                                 <a
-                                    href="package-details.html"
+                                    href="./package-details.html"
                                     class="btn small-btn"
                                 >
-                                    View
+                                    View Details
                                 </a>
 
                             </div>
@@ -565,14 +659,16 @@
                     </article>
 
 
-                    <!-- Package 2 -->
+
+                    <!-- Dubai Package -->
                     <article class="package-card">
 
                         <div class="package-image">
 
                             <img
                                 src="../assets/images/dubai paar.png"
-                                alt="Dubai Travel Package"
+                                alt="Dubai Luxury Escape travel package"
+                                loading="lazy"
                             >
 
                             <span class="package-badge">
@@ -580,6 +676,7 @@
                             </span>
 
                         </div>
+
 
                         <div class="package-content">
 
@@ -592,25 +689,24 @@
                             </h3>
 
                             <p>
-                                Explore luxury shopping, desert
-                                safaris and iconic attractions.
+                                Discover iconic landmarks, exciting desert
+                                safaris and a world of modern luxury.
                             </p>
+
 
                             <div class="package-info">
 
-                                <span>
-                                    🗓 6 Days
-                                </span>
+                                <span>🗓 6 Days</span>
 
-                                <span>
-                                    ⭐ 4.8
-                                </span>
+                                <span>⭐ 4.8</span>
 
                             </div>
+
 
                             <div class="package-bottom">
 
                                 <div>
+
                                     <small>
                                         Starting from
                                     </small>
@@ -618,13 +714,15 @@
                                     <strong>
                                         ₹49,999
                                     </strong>
+
                                 </div>
 
+
                                 <a
-                                    href="package-details.html"
+                                    href="./package-details.html"
                                     class="btn small-btn"
                                 >
-                                    View
+                                    View Details
                                 </a>
 
                             </div>
@@ -634,14 +732,16 @@
                     </article>
 
 
-                    <!-- Package 3 -->
+
+                    <!-- Switzerland Package -->
                     <article class="package-card">
 
                         <div class="package-image">
 
                             <img
                                 src="../assets/images/xyz.png "
-                                alt="Switzerland Travel Package"
+                                alt="Swiss Alpine Adventure travel package"
+                                loading="lazy"
                             >
 
                             <span class="package-badge">
@@ -649,6 +749,7 @@
                             </span>
 
                         </div>
+
 
                         <div class="package-content">
 
@@ -661,25 +762,24 @@
                             </h3>
 
                             <p>
-                                Discover snowy mountains,
-                                beautiful villages and lakes.
+                                Discover magnificent mountains, scenic lakes
+                                and charming villages across Switzerland.
                             </p>
+
 
                             <div class="package-info">
 
-                                <span>
-                                    🗓 7 Days
-                                </span>
+                                <span>🗓 7 Days</span>
 
-                                <span>
-                                    ⭐ 4.9
-                                </span>
+                                <span>⭐ 4.9</span>
 
                             </div>
+
 
                             <div class="package-bottom">
 
                                 <div>
+
                                     <small>
                                         Starting from
                                     </small>
@@ -687,13 +787,15 @@
                                     <strong>
                                         ₹69,999
                                     </strong>
+
                                 </div>
 
+
                                 <a
-                                    href="package-details.html"
+                                    href="./package-details.html"
                                     class="btn small-btn"
                                 >
-                                    View
+                                    View Details
                                 </a>
 
                             </div>
@@ -702,28 +804,33 @@
 
                     </article>
 
+
                 </div>
 
 
+
+                <!-- All Packages -->
                 <div class="section-button">
 
                     <a
-                        href="packages.html"
+                        href="./packages.html"
                         class="btn outline-btn"
                     >
-                        Explore All Packages
+                        View All Travel Packages →
                     </a>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              WHY CHOOSE TRAVELSPHERE
-        ====================================================== -->
+        ================================================== -->
 
         <section class="why-us section">
 
@@ -731,36 +838,49 @@
 
                 <div class="why-us-content">
 
+
+                    <!-- Image -->
                     <div class="why-us-image">
 
                         <img
-                            src="images/why-travel.jpg"
-                            alt="Travel Experience"
+                            src="../assets/images/why-travel.jpg"
+                            alt="A memorable travel experience"
+                            loading="lazy"
                         >
 
                     </div>
 
 
+
+                    <!-- Content -->
                     <div class="why-us-text">
 
                         <span class="section-label">
-                            WHY TRAVELSPHERE
+                            THE TRAVELSPHERE DIFFERENCE
                         </span>
 
+
                         <h2>
-                            Travel With Confidence.
-                            Explore Without Limits.
+                            Less Planning Stress.
+                            <br>
+                            More Extraordinary Memories.
                         </h2>
 
+
                         <p>
-                            We make travel planning simple, reliable
-                            and enjoyable by bringing destinations,
-                            stays, packages and experiences together.
+                            Every great journey begins with a good plan.
+                            TravelSphere brings destinations, stays,
+                            packages and travel inspiration together
+                            to make discovering your next adventure easier.
                         </p>
 
 
+
+                        <!-- Features -->
                         <div class="features-grid">
 
+
+                            <!-- Feature 1 -->
                             <div class="feature">
 
                                 <div class="feature-icon">
@@ -768,19 +888,23 @@
                                 </div>
 
                                 <div>
+
                                     <h3>
-                                        Best Price
+                                        Value for Money
                                     </h3>
 
                                     <p>
-                                        Great experiences at
-                                        competitive prices.
+                                        Explore options that fit your
+                                        travel style and budget.
                                     </p>
+
                                 </div>
 
                             </div>
 
 
+
+                            <!-- Feature 2 -->
                             <div class="feature">
 
                                 <div class="feature-icon">
@@ -788,19 +912,23 @@
                                 </div>
 
                                 <div>
+
                                     <h3>
-                                        Trusted Travel
+                                        Carefully Selected Options
                                     </h3>
 
                                     <p>
-                                        Reliable partners and
-                                        verified experiences.
+                                        Discover destinations, stays
+                                        and travel experiences.
                                     </p>
+
                                 </div>
 
                             </div>
 
 
+
+                            <!-- Feature 3 -->
                             <div class="feature">
 
                                 <div class="feature-icon">
@@ -808,19 +936,23 @@
                                 </div>
 
                                 <div>
+
                                     <h3>
-                                        Expert Support
+                                        Helpful Travel Guidance
                                     </h3>
 
                                     <p>
-                                        Assistance whenever
-                                        you need it.
+                                        Find useful information to
+                                        plan your next journey.
                                     </p>
+
                                 </div>
 
                             </div>
 
 
+
+                            <!-- Feature 4 -->
                             <div class="feature">
 
                                 <div class="feature-icon">
@@ -828,19 +960,32 @@
                                 </div>
 
                                 <div>
+
                                     <h3>
-                                        Easy Booking
+                                        Convenient Planning
                                     </h3>
 
                                     <p>
-                                        Simple and convenient
-                                        trip planning.
+                                        Bring your travel ideas
+                                        together in one place.
                                     </p>
+
                                 </div>
 
                             </div>
+
 
                         </div>
+
+
+
+                        <a
+                            href="./about.html"
+                            class="btn primary-btn"
+                        >
+                            Discover Our Story →
+                        </a>
+
 
                     </div>
 
@@ -851,18 +996,21 @@
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              TRAVEL EXPERIENCES
-        ====================================================== -->
+        ================================================== -->
 
         <section class="experiences-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        FIND YOUR EXPERIENCE
+                        MAKE IT YOUR KIND OF JOURNEY
                     </span>
 
                     <h2>
@@ -870,34 +1018,41 @@
                     </h2>
 
                     <p>
-                        Choose an experience that matches your
-                        travel style.
+                        Whether you love adventure, relaxation or
+                        unforgettable moments with family, find an
+                        experience that feels right for you.
                     </p>
 
                 </div>
 
 
+
+                <!-- Experience Grid -->
                 <div class="experience-grid">
 
-                    <a href="packages.html" class="experience-card">
+
+                    <!-- Adventure -->
+                    <a
+                        href="./packages.html"
+                        class="experience-card"
+                    >
 
                         <img
-                            src="images/experiences/adventure.jpg"
-                            alt="Adventure Travel"
+                            src="../assets/images/adventure.png"
+                            alt="Adventure travel experience"
+                            loading="lazy"
                         >
 
                         <div class="experience-content">
 
-                            <span>
-                                🏔️
-                            </span>
+                            <span>🏔️</span>
 
                             <h3>
                                 Adventure
                             </h3>
 
                             <p>
-                                For thrill seekers
+                                For the thrill seekers
                             </p>
 
                         </div>
@@ -905,25 +1060,29 @@
                     </a>
 
 
-                    <a href="packages.html" class="experience-card">
+
+                    <!-- Luxury -->
+                    <a
+                        href="./packages.html"
+                        class="experience-card"
+                    >
 
                         <img
-                            src="images/experiences/luxury.jpg"
-                            alt="Luxury Travel"
+                            src="../assets/images/luxury.png"
+                            alt="Luxury travel experience"
+                            loading="lazy"
                         >
 
                         <div class="experience-content">
 
-                            <span>
-                                ✨
-                            </span>
+                            <span>✨</span>
 
                             <h3>
                                 Luxury
                             </h3>
 
                             <p>
-                                Travel in style
+                                Enjoy the finer things
                             </p>
 
                         </div>
@@ -931,25 +1090,29 @@
                     </a>
 
 
-                    <a href="packages.html" class="experience-card">
+
+                    <!-- Family -->
+                    <a
+                        href="./packages.html"
+                        class="experience-card"
+                    >
 
                         <img
-                            src="images/experiences/family.jpg"
-                            alt="Family Travel"
+                            src="../assets/images/family.png"
+                            alt="Family holiday experience"
+                            loading="lazy"
                         >
 
                         <div class="experience-content">
 
-                            <span>
-                                👨‍👩‍👧‍👦
-                            </span>
+                            <span>👨‍👩‍👧‍👦</span>
 
                             <h3>
                                 Family
                             </h3>
 
                             <p>
-                                Memories together
+                                Create memories together
                             </p>
 
                         </div>
@@ -957,30 +1120,35 @@
                     </a>
 
 
-                    <a href="packages.html" class="experience-card">
+
+                    <!-- Honeymoon -->
+                    <a
+                        href="./packages.html"
+                        class="experience-card"
+                    >
 
                         <img
-                            src="images/experiences/honeymoon.jpg"
-                            alt="Honeymoon Travel"
+                            src="../assets/images/honeymoon.png"
+                            alt="Romantic honeymoon travel experience"
+                            loading="lazy"
                         >
 
                         <div class="experience-content">
 
-                            <span>
-                                ❤️
-                            </span>
+                            <span>❤️</span>
 
                             <h3>
                                 Honeymoon
                             </h3>
 
                             <p>
-                                Romantic escapes
+                                Find your romantic escape
                             </p>
 
                         </div>
 
                     </a>
+
 
                 </div>
 
@@ -989,41 +1157,49 @@
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              FEATURED HOTELS
-        ====================================================== -->
+        ================================================== -->
 
         <section class="hotels-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        STAY COMFORTABLY
+                        A COMFORTABLE STAY AWAITS
                     </span>
 
                     <h2>
-                        Featured Hotels
+                        Places You'll Love to Stay
                     </h2>
 
                     <p>
-                        Find beautiful places to stay during
-                        your next journey.
+                        Explore beautiful accommodation options for
+                        a relaxing stay during your next adventure.
                     </p>
 
                 </div>
 
 
+
+                <!-- Hotel Grid -->
                 <div class="hotel-grid">
+
 
                     <!-- Hotel 1 -->
                     <article class="hotel-card">
 
                         <img
-                            src="images/hotels/bali-hotel.jpg"
-                            alt="Luxury Bali Resort"
+                            src="../assets/images/Ocean Paradise Resort.png"
+                            alt="Ocean Paradise Resort in Bali"
+                            loading="lazy"
                         >
+
 
                         <div class="hotel-content">
 
@@ -1035,10 +1211,17 @@
                                 Ocean Paradise Resort
                             </h3>
 
+
                             <div class="rating">
-                                ⭐⭐⭐⭐⭐
+
+                                <span aria-label="5 out of 5 stars">
+                                    ⭐⭐⭐⭐⭐
+                                </span>
+
                                 <strong>4.9</strong>
+
                             </div>
+
 
                             <div class="hotel-bottom">
 
@@ -1047,8 +1230,8 @@
                                     <small>/ night</small>
                                 </strong>
 
-                                <a href="hotels.html">
-                                    View
+                                <a href="./hotels.html">
+                                    View Stay →
                                 </a>
 
                             </div>
@@ -1058,13 +1241,16 @@
                     </article>
 
 
+
                     <!-- Hotel 2 -->
                     <article class="hotel-card">
 
                         <img
-                            src="images/hotels/dubai-hotel.jpg"
-                            alt="Luxury Dubai Hotel"
+                            src="../assets/images/Dubai Luxury.png "
+                            alt="Luxury hotel in Dubai"
+                            loading="lazy"
                         >
+
 
                         <div class="hotel-content">
 
@@ -1076,10 +1262,17 @@
                                 Royal Palm Dubai
                             </h3>
 
+
                             <div class="rating">
-                                ⭐⭐⭐⭐⭐
+
+                                <span aria-label="5 out of 5 stars">
+                                    ⭐⭐⭐⭐⭐
+                                </span>
+
                                 <strong>4.8</strong>
+
                             </div>
+
 
                             <div class="hotel-bottom">
 
@@ -1088,8 +1281,8 @@
                                     <small>/ night</small>
                                 </strong>
 
-                                <a href="hotels.html">
-                                    View
+                                <a href="./hotels.html">
+                                    View Stay →
                                 </a>
 
                             </div>
@@ -1099,13 +1292,16 @@
                     </article>
 
 
+
                     <!-- Hotel 3 -->
                     <article class="hotel-card">
 
                         <img
-                            src="images/hotels/maldives-hotel.jpg"
-                            alt="Maldives Resort"
+                            src="../assets/images/maldivs resort.png"
+                            alt="Beautiful island resort in the Maldives"
+                            loading="lazy"
                         >
+
 
                         <div class="hotel-content">
 
@@ -1117,10 +1313,17 @@
                                 Blue Lagoon Resort
                             </h3>
 
+
                             <div class="rating">
-                                ⭐⭐⭐⭐⭐
+
+                                <span aria-label="5 out of 5 stars">
+                                    ⭐⭐⭐⭐⭐
+                                </span>
+
                                 <strong>4.9</strong>
+
                             </div>
+
 
                             <div class="hotel-bottom">
 
@@ -1129,8 +1332,8 @@
                                     <small>/ night</small>
                                 </strong>
 
-                                <a href="hotels.html">
-                                    View
+                                <a href="./hotels.html">
+                                    View Stay →
                                 </a>
 
                             </div>
@@ -1139,134 +1342,149 @@
 
                     </article>
 
+
                 </div>
 
 
+
+                <!-- View Hotels -->
                 <div class="section-button">
 
                     <a
-                        href="hotels.html"
+                        href="./hotels.html"
                         class="btn outline-btn"
                     >
-                        Explore Hotels
+                        Explore All Hotels →
                     </a>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
-             STATS
-        ====================================================== -->
+
+        <!-- =================================================
+             TRAVEL STATS
+        ================================================== -->
 
         <section class="stats-section">
 
             <div class="container stats-grid">
 
+
+                <!-- Destinations -->
                 <div class="stat">
 
-                    <strong>
-                        100+
-                    </strong>
+                    <strong>100+</strong>
 
                     <span>
-                        Destinations
+                        Destinations to Discover
                     </span>
 
                 </div>
 
 
+
+                <!-- Packages -->
                 <div class="stat">
 
-                    <strong>
-                        500+
-                    </strong>
+                    <strong>500+</strong>
 
                     <span>
-                        Travel Packages
+                        Travel Package Options
                     </span>
 
                 </div>
 
 
+
+                <!-- Travelers -->
                 <div class="stat">
 
-                    <strong>
-                        10K+
-                    </strong>
+                    <strong>10K+</strong>
 
                     <span>
-                        Happy Travelers
+                        Travelers Inspired
                     </span>
 
                 </div>
 
 
+
+                <!-- Rating -->
                 <div class="stat">
 
-                    <strong>
-                        4.9/5
-                    </strong>
+                    <strong>4.9/5</strong>
 
                     <span>
-                        Customer Rating
+                        Average Customer Rating
                     </span>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
-             TESTIMONIALS
-        ====================================================== -->
+
+        <!-- =================================================
+             TRAVELER TESTIMONIALS
+        ================================================== -->
 
         <section class="testimonials-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        TRAVELER STORIES
+                        STORIES FROM OUR TRAVEL COMMUNITY
                     </span>
 
                     <h2>
-                        What Our Travelers Say
+                        Experiences Worth Sharing
                     </h2>
 
                     <p>
-                        Real experiences from people who explored
-                        the world with TravelSphere.
+                        Discover what travelers have to say about
+                        finding destinations and planning their journeys
+                        with TravelSphere.
                     </p>
 
                 </div>
 
 
+
+                <!-- Testimonials -->
                 <div class="testimonial-grid">
 
+
+                    <!-- Testimonial 1 -->
                     <article class="testimonial-card">
 
                         <div class="testimonial-user">
 
                             <img
-                                src="images/users/user1.jpg"
-                                alt="Traveler"
+                                src="../assets/images/shivam.png"
+                                alt="Shivam Shaw"
+                                loading="lazy"
                             >
 
                             <div>
 
                                 <h3>
-                                    Rahul Sharma
+                                    Shivam Shaw
                                 </h3>
 
                                 <span>
-                                    Mumbai, India
+                                    Bihar, India
                                 </span>
 
                             </div>
@@ -1274,37 +1492,44 @@
                         </div>
 
 
-                        <div class="testimonial-rating">
+                        <div class="testimonial-rating"
+                            aria-label="5 out of 5 stars">
+
                             ⭐⭐⭐⭐⭐
+
                         </div>
 
 
                         <p>
-                            "TravelSphere made our Bali trip
-                            incredibly easy. Everything was
-                            perfectly planned."
+                            "TravelSphere made discovering our Bali
+                            getaway much easier. The destination
+                            inspiration and travel planning ideas
+                            were really helpful."
                         </p>
 
                     </article>
 
 
+
+                    <!-- Testimonial 2 -->
                     <article class="testimonial-card">
 
                         <div class="testimonial-user">
 
                             <img
-                                src="images/users/user2.jpg"
-                                alt="Traveler"
+                                src="../assets/images/hariom.png"
+                                alt="Hariom Kumar"
+                                loading="lazy"
                             >
 
                             <div>
 
                                 <h3>
-                                    Priya Singh
+                                    Hariom Kumar
                                 </h3>
 
                                 <span>
-                                    Delhi, India
+                                    Bihar, India
                                 </span>
 
                             </div>
@@ -1312,36 +1537,44 @@
                         </div>
 
 
-                        <div class="testimonial-rating">
+                        <div class="testimonial-rating"
+                            aria-label="5 out of 5 stars">
+
                             ⭐⭐⭐⭐⭐
+
                         </div>
 
 
                         <p>
-                            "The hotel recommendations and
-                            package options were excellent."
+                            "I enjoyed exploring different travel
+                            packages and accommodation options.
+                            The website makes it easier to organise
+                            ideas for a future trip."
                         </p>
 
                     </article>
 
 
+
+                    <!-- Testimonial 3 -->
                     <article class="testimonial-card">
 
                         <div class="testimonial-user">
 
                             <img
-                                src="images/users/user3.jpg"
-                                alt="Traveler"
+                                src="../assets/images/nishant.png"
+                                alt="Nishant Pandey"
+                                loading="lazy"
                             >
 
                             <div>
 
                                 <h3>
-                                    Arjun Mehta
+                                    Nishant Pandey
                                 </h3>
 
                                 <span>
-                                    Bengaluru, India
+                                    Bihar, India
                                 </span>
 
                             </div>
@@ -1349,17 +1582,22 @@
                         </div>
 
 
-                        <div class="testimonial-rating">
+                        <div class="testimonial-rating"
+                            aria-label="5 out of 5 stars">
+
                             ⭐⭐⭐⭐⭐
+
                         </div>
 
 
                         <p>
-                            "A beautiful platform for discovering
-                            new places and planning trips."
+                            "A useful place to explore new destinations,
+                            discover travel ideas and start planning
+                            a memorable holiday."
                         </p>
 
                     </article>
+
 
                 </div>
 
@@ -1368,41 +1606,50 @@
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              TRAVEL BLOG
-        ====================================================== -->
+        ================================================== -->
 
         <section class="blog-section section">
 
             <div class="container">
 
+
+                <!-- Section Heading -->
                 <div class="section-heading">
 
                     <span class="section-label">
-                        TRAVEL INSPIRATION
+                        STORIES THAT SPARK WANDERLUST
                     </span>
 
                     <h2>
-                        Latest Travel Stories
+                        Inspiration for Your Next Adventure
                     </h2>
 
                     <p>
-                        Get travel tips, guides and inspiration
-                        for your next adventure.
+                        Explore travel guides, destination ideas and
+                        practical tips to help you make the most of
+                        your next journey.
                     </p>
 
                 </div>
 
 
+
+                <!-- Blog Grid -->
                 <div class="blog-grid">
+
 
                     <!-- Blog 1 -->
                     <article class="blog-card">
 
                         <img
-                            src="images/blog/india-travel.jpg"
-                            alt="Best places in India"
+                            src="../assets/images/India Travel.png"
+                            alt="Beautiful destinations to explore in India"
+                            loading="lazy"
                         >
+
 
                         <div class="blog-content">
 
@@ -1411,16 +1658,17 @@
                             </span>
 
                             <h3>
-                                10 Best Places To Visit In India
+                                10 Beautiful Places to Visit in India
                             </h3>
 
                             <p>
-                                Discover some of the most beautiful
-                                destinations across India.
+                                From mountain escapes to historic cities,
+                                discover destinations that showcase
+                                the beauty and diversity of India.
                             </p>
 
-                            <a href="blog-details.html">
-                                Read More →
+                            <a href="./blog-details.html">
+                                Read the Story →
                             </a>
 
                         </div>
@@ -1428,13 +1676,16 @@
                     </article>
 
 
+
                     <!-- Blog 2 -->
                     <article class="blog-card">
 
                         <img
-                            src="images/blog/bali-guide.jpg"
-                            alt="Bali Travel Guide"
+                            src="../assets/images/Bali Travel Guide.png"
+                            alt="Travel guide to Bali, Indonesia"
+                            loading="lazy"
                         >
+
 
                         <div class="blog-content">
 
@@ -1443,16 +1694,17 @@
                             </span>
 
                             <h3>
-                                The Ultimate Bali Travel Guide
+                                Your Guide to an Unforgettable Bali Trip
                             </h3>
 
                             <p>
-                                Everything you need to know before
-                                planning your Bali adventure.
+                                Discover tropical beaches, cultural
+                                experiences and useful ideas for
+                                planning your Bali getaway.
                             </p>
 
-                            <a href="blog-details.html">
-                                Read More →
+                            <a href="./blog-details.html">
+                                Read the Story →
                             </a>
 
                         </div>
@@ -1460,13 +1712,16 @@
                     </article>
 
 
+
                     <!-- Blog 3 -->
                     <article class="blog-card">
 
                         <img
-                            src="images/blog/travel-tips.jpg"
-                            alt="Travel Tips"
+                            src="../assets/images/Travel Tips.png"
+                            alt="Useful tips for planning a holiday"
+                            loading="lazy"
                         >
+
 
                         <div class="blog-content">
 
@@ -1475,44 +1730,50 @@
                             </span>
 
                             <h3>
-                                How To Plan The Perfect Trip
+                                How to Plan a Better Holiday
                             </h3>
 
                             <p>
-                                Simple tips to make your next
-                                journey easier and more enjoyable.
+                                Learn simple ways to organise your
+                                itinerary, prepare your budget and
+                                make your journey more enjoyable.
                             </p>
 
-                            <a href="blog-details.html">
-                                Read More →
+                            <a href="./blog-details.html">
+                                Read the Story →
                             </a>
 
                         </div>
 
                     </article>
 
+
                 </div>
 
 
+
+                <!-- All Stories -->
                 <div class="section-button">
 
                     <a
-                        href="blog.html"
+                        href="./blog.html"
                         class="btn outline-btn"
                     >
-                        Read All Stories
+                        Explore All Travel Stories →
                     </a>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
+
+        <!-- =================================================
              NEWSLETTER
-        ====================================================== -->
+        ================================================== -->
 
         <section class="newsletter-section">
 
@@ -1520,42 +1781,53 @@
 
                 <div class="newsletter-content">
 
+
+                    <!-- Newsletter Text -->
                     <div>
 
                         <span class="section-label">
-                            STAY INSPIRED
+                            A LITTLE INSPIRATION GOES A LONG WAY
                         </span>
 
+
                         <h2>
-                            Get Travel Inspiration
-                            In Your Inbox
+                            Your Next Adventure
+                            Starts in Your Inbox.
                         </h2>
 
+
                         <p>
-                            Subscribe for travel tips,
-                            destination guides and exclusive
-                            travel offers.
+                            Get destination inspiration, travel guides
+                            and useful holiday tips delivered straight
+                            to your inbox.
                         </p>
 
                     </div>
 
 
+
+                    <!-- Newsletter Form -->
                     <form class="newsletter-form">
 
                         <input
                             type="email"
+                            name="email"
                             placeholder="Enter your email address"
+                            aria-label="Your email address"
+                            autocomplete="email"
                             required
                         >
+
 
                         <button
                             type="submit"
                             class="btn primary-btn"
                         >
-                            Subscribe
+                            Join the Journey →
                         </button>
 
                     </form>
+
 
                 </div>
 
@@ -1563,7 +1835,9 @@
 
         </section>
 
+
     </main>
+
 
 
     <!-- =====================================================
@@ -1575,14 +1849,19 @@
         <div class="container footer-grid">
 
 
-            <!-- Footer Brand -->
+            <!-- Brand Column -->
             <div class="footer-brand">
 
-                <a href="index.html" class="logo">
+                <a
+                    href="./index.html"
+                    class="logo"
+                    aria-label="TravelSphere Home"
+                >
 
                     <img
-                        src="images/logo.png"
+                        src="../assets/images/Logo.png"
                         alt="TravelSphere Logo"
+                        loading="lazy"
                     >
 
                     <span>
@@ -1591,12 +1870,15 @@
 
                 </a>
 
+
                 <p>
-                    Explore the world, discover new experiences
-                    and create unforgettable memories.
+                    Discover inspiring destinations, explore
+                    unforgettable experiences and find new reasons
+                    to see more of the world.
                 </p>
 
 
+                <!-- Social Links -->
                 <div class="social-links">
 
                     <a href="#" aria-label="Facebook">
@@ -1616,49 +1898,51 @@
             </div>
 
 
+
             <!-- Quick Links -->
             <div class="footer-column">
 
                 <h3>
-                    Quick Links
+                    Explore
                 </h3>
 
-                <a href="index.html">
+                <a href="./index.html">
                     Home
                 </a>
 
-                <a href="destinations.html">
+                <a href="./destinations.html">
                     Destinations
                 </a>
 
-                <a href="packages.html">
-                    Packages
+                <a href="./packages.html">
+                    Travel Packages
                 </a>
 
-                <a href="hotels.html">
+                <a href="./hotels.html">
                     Hotels
                 </a>
 
             </div>
 
 
+
             <!-- Company -->
             <div class="footer-column">
 
                 <h3>
-                    Company
+                    About TravelSphere
                 </h3>
 
-                <a href="about.html">
-                    About Us
+                <a href="./about.html">
+                    Our Story
                 </a>
 
-                <a href="blog.html">
+                <a href="./blog.html">
                     Travel Blog
                 </a>
 
-                <a href="contact.html">
-                    Contact
+                <a href="./contact.html">
+                    Contact Us
                 </a>
 
                 <a href="#">
@@ -1666,17 +1950,18 @@
                 </a>
 
                 <a href="#">
-                    Terms & Conditions
+                    Terms &amp; Conditions
                 </a>
 
             </div>
+
 
 
             <!-- Contact -->
             <div class="footer-column">
 
                 <h3>
-                    Contact Us
+                    Get in Touch
                 </h3>
 
                 <p>
@@ -1688,23 +1973,27 @@
                 </p>
 
                 <p>
-                    📞 +91 00000 00000
+                    📞 +91 78708 65886
+                </p>
+
+                <p>
+                    📞 +91 62873 04222
                 </p>
 
             </div>
 
+
         </div>
 
 
-        <!-- Copyright -->
 
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
 
             <div class="container">
 
                 <p>
-                    © 2026 TravelSphere.
-                    All Rights Reserved.
+                    © 2026 TravelSphere. All Rights Reserved.
                 </p>
 
             </div>
@@ -1712,6 +2001,7 @@
         </div>
 
     </footer>
+
 
 
 </body>
